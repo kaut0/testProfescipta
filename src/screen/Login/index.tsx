@@ -34,7 +34,7 @@ const Login = ({ navigation }: LoginProps): React.JSX.Element => {
         if (login.password === '') return Alert.alert('Error', 'Please insert password')
     }
     const loginHandler = async () => {
-        // validate();
+        validate();
         const response = await PostRequest('token', {
             grant_type: "client_credentials",
             client_id: 'profes-api',
